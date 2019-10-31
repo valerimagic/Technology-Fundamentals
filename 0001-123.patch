@@ -1,0 +1,63 @@
+From aa05448fb16aeca96635b7d1f7a4050e90f9bf9e Mon Sep 17 00:00:00 2001
+From: valerimagic <49991533+valerimagic@users.noreply.github.com>
+Date: Thu, 31 Oct 2019 22:26:51 +0200
+Subject: [PATCH] 123
+
+---
+ .../02.Common-elements.csproj                 |  8 ++++++
+ Array/02.Common-elements/Program.cs           | 27 +++++++++++++++++++
+ 2 files changed, 35 insertions(+)
+ create mode 100644 Array/02.Common-elements/02.Common-elements.csproj
+ create mode 100644 Array/02.Common-elements/Program.cs
+
+diff --git a/Array/02.Common-elements/02.Common-elements.csproj b/Array/02.Common-elements/02.Common-elements.csproj
+new file mode 100644
+index 0000000..23df604
+--- /dev/null
++++ b/Array/02.Common-elements/02.Common-elements.csproj
+@@ -0,0 +1,8 @@
++<Project Sdk="Microsoft.NET.Sdk">
++
++  <PropertyGroup>
++    <OutputType>Exe</OutputType>
++    <TargetFramework>netcoreapp2.1</TargetFramework>
++  </PropertyGroup>
++
++</Project>
+diff --git a/Array/02.Common-elements/Program.cs b/Array/02.Common-elements/Program.cs
+new file mode 100644
+index 0000000..1dd2bc8
+--- /dev/null
++++ b/Array/02.Common-elements/Program.cs
+@@ -0,0 +1,27 @@
++﻿namespace _02.Common_Elements
++{
++    using System;
++    using System.Collections.Generic;
++    using System.Linq;
++
++    class Program
++    {
++        static void Main()
++        {
++            string[] firstArr = Console.ReadLine().Split();
++            string[] secondArr = Console.ReadLine().Split();
++
++            List<string> comminElements = new List<string>();
++
++            foreach (var str in secondArr)
++            {
++                if (firstArr.Contains(str))
++                {
++                    comminElements.Add(str);
++                }
++            }
++
++            Console.WriteLine(string.Join(" ", comminElements));
++        }
++    }
++}
+\ No newline at end of file
+-- 
+2.23.0.windows.1
+
